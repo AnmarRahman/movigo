@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Logo from "../resources/movigo-logo-rm.png";
-import Link from "next/link";
+import React from "react";
 
 function Header({ href, buttonText }) {
   const date = new Date();
@@ -10,11 +8,17 @@ function Header({ href, buttonText }) {
     month: "long",
     day: "numeric",
   };
-  const formattedDate = date.toLocaleString("en-US", options);
+  const separator = ", ";
+
+  const formattedDate = date
+    .toLocaleString("en-US", options)
+    .split(",")
+    .join(separator);
+  console.log(formattedDate.split(","));
 
   return (
     <>
-      <header className="text-gray-600 body-font flex items-center justify-center gap-x-2 pt-10">
+      <header className="text-gray-600 body-font flex items-center justify-center gap-x-2 py-10">
         <div className="border-[#4E3C16] border-l-0 border-r-0  border-4 bg-[#E2CCB1] py-1">
           <div className="py-7 px-32 bg-[#E2CCB1] border-[#4E3C16] border-2 border-l-0 border-r-0 relative headerSide " />
         </div>

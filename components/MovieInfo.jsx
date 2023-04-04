@@ -18,7 +18,7 @@ function MovieInfo({ movie }) {
     const trailer = videos.find(
       (video) => video.type === "Trailer" && video.site === "YouTube"
     );
-    const trailerVideoId = trailer.key;
+    const trailerVideoId = trailer?.key;
     return trailerVideoId;
   }
 
