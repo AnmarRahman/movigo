@@ -26,7 +26,7 @@ function Header({ href, buttonText }) {
             <div id="headerDateWrapper" className="relative">
               <div
                 id="headerDate"
-                className=" py-6 px-32 text-4xl text-[#4E3C16] bg-[#E2CCB1] font-['Playfair'] border-2 border-[#4E3C16]"
+                className=" py-6 px-32 text-4xl text-[#4E3C16] bg-[#E2CCB1] font-['Playfair'] border-4 border-[#4E3C16]"
               >
                 <div
                   id="headerContent"
