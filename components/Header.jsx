@@ -6,7 +6,7 @@ import HeaderTitleMiddle from "./HeaderTitleMiddle";
 function Header({ href, buttonText }) {
   return (
     <>
-      <header className="py-10">
+      <header className="py-4">
         <HeaderDate />
         <HeaderTitleTop />
         <HeaderTitleMiddle />

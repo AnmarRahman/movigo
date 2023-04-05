@@ -23,6 +23,20 @@
 }
 
 @font-face {
+  font-family: 'LittleDeuceCoupeNF';
+  src: url('../fonts/LittleDeuceCoupeNF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vintage';
+  src: url('../fonts/Vintage.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'ThorneShaded';
   src: url('../fonts/ThorneShaded.woff') format('woff');
   font-weight: normal;
@@ -186,7 +200,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border-right: none;
 }
 
-#left::after {
+#headerDateLeft::after {
 	content: "";
 	width: 50%;
 	position: absolute;
@@ -197,7 +211,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 }
 
 
-#left::before {
+#headerDateLeft::before {
 	content: "";
 	width: 50%;
 	position: absolute;
@@ -208,7 +222,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 
 }
 
-#right::after {
+#headerDateRight::after {
 	content: "";
 	width: 50%;
 	position: absolute;
@@ -218,7 +232,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border : #4E3C16 1px solid;
 }
 
-#right::before {
+#headerDateRight::before {
 	content: "";
 	width: 50%;
 	position: absolute;
@@ -228,6 +242,49 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border : #4E3C16 1px solid;
 }
 
+/* HERO */
+
+#heroTitleLeft::after {
+	content: "";
+	width: 40%;
+	position: absolute;
+	top: 8px;
+	right: 100%;
+	transform: translateX(100%);
+	border : white 1px solid;
+}
+
+
+#heroTitleLeft::before {
+	content: "";
+	width: 40%;
+	position: absolute;
+	bottom: 8px;
+	right: 100%;
+	transform: translateX(100%);
+	border : white 1px solid;
+
+}
+
+#heroTitleRight::after {
+	content: "";
+	width: 40%;
+	position: absolute;
+	top: 8px;
+	left: 100%;
+	transform: translateX(-100%);
+	border : white 1px solid;
+}
+
+#heroTitleRight::before {
+	content: "";
+	width: 40%;
+	position: absolute;
+	bottom: 8px;
+	left: 100%;
+	transform: translateX(-100%);
+	border : white 1px solid;
+}
 
 @keyframes gradient {
 0% {

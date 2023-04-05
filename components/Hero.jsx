@@ -2,13 +2,19 @@ import Image from "next/image";
 import heroImg from "../resources//HD-wallpaper-2021-avatar-2-films-poster.jpg";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import HeroTitle from "./HeroTitle";
 
-function Hero() {
+function Hero({ flipAnimation }) {
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
   function movieSearched() {
-    router.push(`/${searchQuery}`);
+    if (searchQuery.trim() !== "") {
+      flipAnimation();
+      setTimeout(() => {
+        router.push(`/${searchQuery}`);
+      }, 1000);
+    }
   }
 
   function handleSearchInputChange(event) {
@@ -18,7 +24,8 @@ function Hero() {
   return (
     <>
       <section>
-        <div className="container mx-auto flex flex-col px-5 py-12 justify-center items-center">
+        <div className="container mx-auto flex flex-col px-5 py-2 justify-center items-center">
+          <HeroTitle />
           {/* <Image
             src={heroImg}
             className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"

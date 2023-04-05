@@ -1,12 +1,11 @@
 import axios from "axios";
 import Header from "../../components/Header";
 import MovieInfo from "../../components/MovieInfo";
-import React, { useEffect, useState } from "react";
-import YouTube from "react-youtube";
+import React from "react";
 
 function moviePage({ movie }) {
   return (
-    <div className="">
+    <div className="bg-[#E2CCB1]">
       <Header href="/" buttonText="Home" />
       <MovieInfo movie={movie} />
     </div>

@@ -5,7 +5,7 @@ import axios from "axios";
 
 function searchList({ movies }) {
   return (
-    <div>
+    <div className="bg-[#E2CCB1]">
       <Header href="/" buttonText="Home" />
       <Search />
       <MoviesList movieArray={movies} />
