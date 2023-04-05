@@ -3,10 +3,10 @@ import HeaderDate from "./HeaderDate";
 import HeaderTitleTop from "./HeaderTitleTop";
 import HeaderTitleMiddle from "./HeaderTitleMiddle";
 
-function Header({ href, buttonText }) {
+function Header({ visible }) {
   return (
     <>
-      <header className="py-4">
+      <header className={`py-4 ${visible}`}>
         <HeaderDate />
         <HeaderTitleTop />
         <HeaderTitleMiddle />

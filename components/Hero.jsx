@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import HeroTitle from "./HeroTitle";
 
-function Hero({ flipAnimation }) {
+function Hero({ flipAnimation, visible }) {
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
@@ -23,8 +23,10 @@ function Hero({ flipAnimation }) {
 
   return (
     <>
-      <section>
-        <div className="container mx-auto flex flex-col px-5 py-2 justify-center items-center">
+      <>
+        <div
+          className={`container mx-auto flex flex-col px-5 py-2 justify-center items-center ${visible}`}
+        >
           <HeroTitle />
           {/* <Image
             src={heroImg}
@@ -66,7 +68,7 @@ function Hero({ flipAnimation }) {
             </div>
           </div>
         </div>
-      </section>
+      </>
     </>
   );
 }
