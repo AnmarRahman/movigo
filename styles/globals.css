@@ -21,6 +21,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'ThorneShaded';
+  src: url('../fonts/ThorneShaded.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* fonts\PlayfairDisplaySC-Black.woff
 fonts\PlayfairDisplaySC-BlackItalic.woff
 fonts\PlayfairDisplaySC-Bold.woff
@@ -30,7 +37,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 
 /* HEADER */
 
-#headerContainer1::before {
+#headerDateContainer1::before {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -44,7 +51,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border-radius: 0 100% 0 0;
 }
 
-#headerContainer1::after {
+#headerDateContainer1::after {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -58,7 +65,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border-radius: 100% 0 0 0;
 }
 
-#headerContainer2::before {
+#headerDateContainer2::before {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -72,7 +79,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border-radius: 0 0 100% 0;
 }
 
-#headerContainer2::after {
+#headerDateContainer2::after {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -142,7 +149,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	border-radius:100% 0 0 0;
 }
 
-.headerSide::after {
+.headerDateSide::after {
 	content: "";
 	width: 100%;
 	position: absolute;
@@ -151,6 +158,30 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	transform: translate(-50%,-50%);
 	border : #4E3C16 dashed;
 	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.headerTitleLeftSide::after {
+	content: "";
+	width: 200%;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(-50%,-50%);
+	border : #6c5d3e solid 1px;
+	border-left: none;
+	border-right: none;
+}
+
+.headerTitleRightSide::after {
+	content: "";
+	width: 200%;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%,-50%);
+	border : #6c5d3e solid 1px;
 	border-left: none;
 	border-right: none;
 }
@@ -196,6 +227,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	transform: translateX(-100%);
 	border : #4E3C16 1px solid;
 }
+
 
 @keyframes gradient {
 0% {
