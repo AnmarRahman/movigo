@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import SearchButton from "../components/searchButton";
+import SearchButton from "../components/SearchButton";
 
 export default function Test() {
   const [flipped, setFlipped] = useState(false);
