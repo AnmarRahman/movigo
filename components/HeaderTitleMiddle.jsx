@@ -1,11 +1,11 @@
 function HeaderTitleMiddle() {
   return (
-    <div className="flex items-center justify-center gap-x-2 py-0 text-[#4E3C16]">
+    <div className="flex items-center justify-center text-[#4E3C16] pb-2">
       <div
         id="headerContent"
-        className="flex items-center justify-center h-[50px] "
+        className="flex items-center justify-center h-[40px] "
       >
-        <div className="text-8xl ">NEWSPAPER</div>
+        <div className="text-[112px] font-['Vintage']">NEWSPAPER</div>
       </div>
     </div>
   );
