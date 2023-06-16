@@ -1,9 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function Hero({ visible }) {
+  const router = useRouter();
+  const { searchedMovie } = router.query;
   const [movies, setMovies] = useState([]);
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
+
+  function movieClicked(id) {
+    router.push(`/${searchedMovie}/${id}`);
+  }
 
   useEffect(() => {
     fetchMovies().then((moviesData) => {
@@ -33,7 +40,10 @@ function Hero({ visible }) {
           >
             &lt;
           </div>
-          <div className=" px-8 py-8 mb-4 border-2  shadow-2xl border-black flex items-center space-x-12 ">
+          <div
+            className=" px-8 py-8 mb-4 border-2  shadow-2xl border-black flex items-center space-x-12 "
+            onClick={() => movieClicked(movies[currentMovieIndex].id)}
+          >
             {console.log(movies)}
 
             {/* <img
