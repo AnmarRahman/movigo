@@ -28,6 +28,10 @@ function Hero({ visible }) {
     );
   };
 
+  if (movies.length === 0) {
+    return null; // Render nothing if movies array is empty
+  }
+
   return (
     <>
       <div
@@ -46,11 +50,6 @@ function Hero({ visible }) {
           >
             {console.log(movies)}
 
-            {/* <img
-              className="absolute scale-150"
-              src={`https://image.tmdb.org/t/p/w500${movies[currentMovieIndex].backdrop_path}`}
-              alt=""
-            /> */}
             <img
               src={`https://image.tmdb.org/t/p/w300${movies[currentMovieIndex].backdrop_path}`}
               alt=""
@@ -79,7 +78,6 @@ function Hero({ visible }) {
     </>
   );
 }
-// I have a hero array in javascript that contains a movies array. I want to show the first movie object and also add arrows the the sides of the object. A left arrow on the left and a right arrow on the right. When i click on the right arrow, the current movie object fades away and the next movie object fades in. When i click on the left arrow, same thing happens but the previous movie object takes place.
 
 const fetchMovies = () => {
   const options = {
