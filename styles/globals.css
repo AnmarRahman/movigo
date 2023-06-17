@@ -10,6 +10,9 @@
 	box-sizing: border-box;
 }
 
+
+
+
 /* body, .bgAnimation {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -17,7 +20,7 @@
 	@apply overflow-x-hidden !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600
 } */
 
-body {
+/* body {
 	background-color: wheat;
 }
 
@@ -68,7 +71,7 @@ body {
   src: url('../fonts/ThorneShaded.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
+} */
 /* fonts\PlayfairDisplaySC-Black.woff
 fonts\PlayfairDisplaySC-BlackItalic.woff
 fonts\PlayfairDisplaySC-Bold.woff
@@ -78,7 +81,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
 
 /* HEADER */
 
-#headerDateContainer1::before {
+/* #headerDateContainer1::before {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -275,11 +278,11 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	left: 90%;
 	transform: translateX(-100%);
 	border : #4E3C16 1px solid;
-}
+} */
 
 /* HERO */
 
-#heroTitleLeft::after {
+/* #heroTitleLeft::after {
 	content: "";
 	width: 40%;
 	position: absolute;
@@ -333,23 +336,23 @@ fonts\PlayfairDisplaySC-Regular.woff */
 	100% {
 		background-position: 0% 50%;
 	}
-}
+} */
 
 
 /* TEST */
 
-.container {
+/* .container {
    width: 100%;
-  /* height: 100vh; */
-}
+  height: 100vh;
+} */
 
-.first {
-	/* margin-top: 16px; */
-  /* position: absolute; */
+/* .first {
+	margin-top: 16px;
+  position: absolute;
   top: 0;
   left: 0;
   width: 45vw;
-  /* height: 100%; */
+  height: 100%;
   transform: translateX(0%);
   transition: transform 0.5s ease-in-out;
   z-index: 2;
@@ -362,7 +365,7 @@ fonts\PlayfairDisplaySC-Regular.woff */
   top: 0;
   left: 0;
   width: 45vw;
-  /* height: 100%; */
+  height: 100%;
   transform: translateX(110%);
   transition: transform 0.5s ease-in-out;
   z-index: 0;
@@ -413,4 +416,5 @@ fonts\PlayfairDisplaySC-Regular.woff */
   	left: 50%;
   	transform: translate(-50%, -50%);
 	z-index: 100;
-}
+} */
+

@@ -1,7 +1,4 @@
 import React from "react";
-import HeaderDate from "./HeaderDate";
-import HeaderTitleTop from "./HeaderTitleTop";
-import HeaderTitleMiddle from "./HeaderTitleMiddle";
 import SearchButton from "./SearchButton";
 import { useRouter } from "next/router";
 import Link from "next/link";

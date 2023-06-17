@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
+import Hero from "../components/Hero.jsx";
 
 export default function Test() {
   const [visible, setVisible] = useState("visible");

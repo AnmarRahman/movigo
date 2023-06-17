@@ -37,7 +37,7 @@ function SearchButton() {
             onChange={handleSearchInputChange}
             onKeyDown={handleKeyPress}
           />
-          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <BiSearch className="text-2xl" />
           </span>
         </div>

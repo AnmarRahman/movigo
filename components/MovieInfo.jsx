@@ -45,22 +45,22 @@ function MovieInfo({ movie }) {
         onClick={() => router.push(`/${searchedMovie}`)}
       />
       <div
-        class="w-full px-8 py-8 mb-4 border-2 rounded-2xl shadow-2xl hover:scale-[1.005] transition duration-300 border-black border-opacity-60 flex items-center space-x-12"
+        className="w-full px-8 py-8 mb-4 border-2 rounded-2xl shadow-2xl hover:scale-[1.005] transition duration-300 border-black border-opacity-60 flex items-center space-x-12"
         key={movie.id}
       >
         <div>
           <img
-            class=""
+            className=""
             src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
           />
-          <div class="">
-            <h2 class="text-lg sm:text-xl text-black font-semibold title-font">
+          <div className="">
+            <h2 className="text-lg sm:text-xl text-black font-semibold title-font">
               {movie.original_title}
             </h2>
-            <p class="leading-relaxed text-md mb-4 text-gray-600">
+            <p className="leading-relaxed text-md mb-4 text-gray-600">
               {`Release date : ${movie.release_date}`}
             </p>
-            <p class="leading-relaxed text-md mb-4 text-black font-semibold">
+            <p className="leading-relaxed text-md mb-4 text-black font-semibold">
               {movie.overview}
             </p>
           </div>

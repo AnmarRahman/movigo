@@ -1,16 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import HeroMovie from "./HeroMovie";
 
 function Hero({ visible }) {
-  const router = useRouter();
-  const { searchedMovie } = router.query;
   const [movies, setMovies] = useState([]);
+  const [backgroundImg, setBackgroundImg] = useState("");
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
-
-  function movieClicked(id) {
-    router.push(`/${searchedMovie}/${id}`);
-  }
 
   useEffect(() => {
     fetchMovies().then((moviesData) => {
@@ -35,44 +30,41 @@ function Hero({ visible }) {
   return (
     <>
       <div
-        className={`container mx-auto flex justify-center items-center ${visible}`}
+        className={`relative mx-auto flex justify-center items-center h-[70vh] ${visible}`}
       >
-        <div className="flex items-center justify-center">
-          <div
-            className="cursor-pointer text-3xl pr-6"
+        <div className="w-full flex items-center justify-center overflow-hidden">
+          <button
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl text-white z-10 px-4 py-2 transition-opacity duration-300 focus:outline-none"
             onClick={handlePreviousMovie}
           >
             &lt;
-          </div>
-          <div
-            className=" px-8 py-8 mb-4 border-2  shadow-2xl border-black flex items-center space-x-12 "
-            onClick={() => movieClicked(movies[currentMovieIndex].id)}
-          >
-            {console.log(movies)}
-
-            <img
-              src={`https://image.tmdb.org/t/p/w300${movies[currentMovieIndex].backdrop_path}`}
-              alt=""
-            />
-            <div class="">
-              <h2 class="text-lg sm:text-xl text-black font-semibold title-font">
-                {movies[currentMovieIndex].original_title}
-              </h2>
-              <p class="leading-relaxed text-md mb-4 text-gray-600">
-                {`Release date : ${movies[currentMovieIndex].release_date}`}
-              </p>
-              <p class="leading-relaxed text-md mb-4 text-black font-semibold">
-                {movies[currentMovieIndex].overview}
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="cursor-pointer text-3xl pl-6"
+          </button>
+          <button
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl text-white z-10 px-4 py-2 transition-opacity duration-300 focus:outline-none"
             onClick={handleNextMovie}
           >
             &gt;
-          </div>
+          </button>
+
+          {movies.map((movie, index) => (
+            <div
+              key={index}
+              className={`${
+                index === currentMovieIndex
+                  ? "translate-x-0"
+                  : "translate-x-full"
+              } transition-transform duration-1000 absolute top-0 left-0 w-full h-full flex justify-center items-center`}
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                transform: `translateX(${(index - currentMovieIndex) * 100}%)`,
+              }}
+            >
+              <HeroMovie movie={movie} />
+            </div>
+          ))}
         </div>
       </div>
     </>
