@@ -4,12 +4,13 @@ import HeroMovie from "./HeroMovie";
 
 function Hero({ visible }) {
   const [movies, setMovies] = useState([]);
-  const [backgroundImg, setBackgroundImg] = useState("");
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     fetchMovies().then((moviesData) => {
       setMovies(moviesData.slice(0, 10));
+      console.log(movies);
     });
   }, []);
 
@@ -23,6 +24,14 @@ function Hero({ visible }) {
     );
   };
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   if (movies.length === 0) {
     return null; // Render nothing if movies array is empty
   }
@@ -31,17 +40,33 @@ function Hero({ visible }) {
     <>
       <div
         className={`relative mx-auto flex justify-center items-center h-[70vh] ${visible}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <div className="w-full flex items-center justify-center overflow-hidden">
           <button
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl text-white z-10 px-4 py-2 transition-opacity duration-300 focus:outline-none"
-            onClick={handlePreviousMovie}
+            className={`absolute left-0 top-1/2 transform -translate-y-1/2 text-3xl text-white z-10 px-20 py-2 transition-opacity duration-300 focus:outline-none ${
+              (currentMovieIndex === 0 || !isHovered) && "invisible"
+            }`}
+            onClick={() => {
+              console.log(currentMovieIndex);
+              if (currentMovieIndex !== 0) {
+                handlePreviousMovie();
+              }
+            }}
           >
             &lt;
           </button>
           <button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl text-white z-10 px-4 py-2 transition-opacity duration-300 focus:outline-none"
-            onClick={handleNextMovie}
+            className={`absolute right-0 top-1/2 transform -translate-y-1/2 text-3xl text-white z-10 px-20 py-2 transition-opacity duration-300 focus:outline-none ${
+              (currentMovieIndex === 9 || !isHovered) && "invisible"
+            }`}
+            onClick={() => {
+              console.log(currentMovieIndex);
+              if (currentMovieIndex !== 9) {
+                handleNextMovie();
+              }
+            }}
           >
             &gt;
           </button>
