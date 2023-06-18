@@ -10,7 +10,7 @@ function MoviesList({ movieArray, loading }) {
 
   return (
     <>
-      <section className="text-gray-600">
+      <section className="text-gray-600 relative">
         <div className="container px-5 py-24 mx-auto">
           <select
             className="mb-4 bg-gray-50 border-2 border-gray-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
