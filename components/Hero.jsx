@@ -99,8 +99,8 @@ function Hero({ visible }) {
 const fetchMovies = () => {
   const options = {
     method: "GET",
-    url: "https://api.themoviedb.org/3/trending/movie/week",
-    params: { language: "en-US" },
+    url: "https://api.themoviedb.org/3/movie/now_playing",
+    params: { language: "en-US", page: "1" },
     headers: {
       accept: "application/json",
       Authorization:
