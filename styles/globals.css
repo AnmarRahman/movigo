@@ -10,6 +10,12 @@
 	box-sizing: border-box;
 }
 
+@layer base {
+	body {
+		@apply overflow-x-hidden !scrollbar-thin !scrollbar-thumb-[#6366F1] !scrollbar-track-gray-100
+	}
+}
+
 
 
 

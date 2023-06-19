@@ -8,7 +8,9 @@ export default function Test() {
   const [visible, setVisible] = useState("visible");
 
   return (
-    <div className={`bg-white `}>
+    <div
+      className={` overflow-x-hidden scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 `}
+    >
       <Header visible={visible} href="searchList" buttonText="Movies List" />
       <Hero visible={visible} />
       <Upcoming />
