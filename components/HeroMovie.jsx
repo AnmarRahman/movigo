@@ -41,8 +41,8 @@ function HeroMovie({ movie }) {
             </button>
           </div>
           <img
-            className="rounded-xl scale-125"
-            src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+            className="rounded-xl w-[500px]"
+            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
             alt=""
           />
         </div>

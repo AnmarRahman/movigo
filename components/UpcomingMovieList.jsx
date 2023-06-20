@@ -36,7 +36,7 @@ function ComingSoonMoviesList({ movieArray, loading }) {
 
                   return (
                     <div
-                      className="rounded-2xl hover:scale-[1.005] transition duration-300 flex flex-col items-center"
+                      className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-col items-center"
                       key={movie.id}
                       onClick={() => movieClicked(movie.id)}
                     >

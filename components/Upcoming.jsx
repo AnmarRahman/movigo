@@ -39,7 +39,7 @@ function Upcoming() {
 
   return (
     <>
-      <div className={`relative mx-auto bg-gray-800`}>
+      <div className={`relative mx-auto bg-[#242424]`}>
         <div className="container px-5 py-12 mx-auto">
           <p className="text-6xl font-extrabold text-white pb-12">UPCOMING</p>
 

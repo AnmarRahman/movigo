@@ -37,7 +37,7 @@ function TopRatedMovieList({ movieArray, loading }) {
 
                     return (
                       <div
-                        className="rounded-2xl hover:scale-[1.005] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 border-2 p-6"
+                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 px-6 bg-black/50"
                         key={movie.id}
                         onClick={() => movieClicked(movie.id)}
                       >
@@ -73,7 +73,7 @@ function TopRatedMovieList({ movieArray, loading }) {
 
                     return (
                       <div
-                        className="rounded-2xl hover:scale-[1.005] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 border-2 p-6"
+                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 px-6 bg-black/50"
                         key={movie.id}
                         onClick={() => movieClicked(movie.id)}
                       >
