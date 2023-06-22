@@ -4,6 +4,8 @@ import Hero from "../components/Hero.jsx";
 import Upcoming from "../components/Upcoming";
 import TopRated from "../components/TopRated";
 import Blogs from "../components/Blogs";
+import Footer from "../components/Footer";
+import MoviePosterTime from "../components/MoviePosterTime";
 
 export default function Test() {
   const [visible, setVisible] = useState("visible");
@@ -16,14 +18,10 @@ export default function Test() {
       <Hero visible={visible} />
       <Upcoming />
       {/* <Hero visible={visible} /> */}
-      <img
-        className="bg-cover"
-        src="https://www.lucasfilm.com/app/uploads/Indiana-Jones-and-the-Dial-of-Destiny-Marquee-B.jpg"
-        alt=""
-      />
+      <MoviePosterTime />
       <TopRated />
       <Blogs />
-      <TopRated />
+      <Footer />
     </div>
   );
 }

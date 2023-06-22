@@ -16,7 +16,12 @@
 	}
 }
 
-
+@font-face {
+  font-family: 'Adventure';
+  src: url('../fonts/Adventure.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* body, .bgAnimation {
@@ -30,12 +35,7 @@
 	background-color: wheat;
 }
 
-@font-face {
-  font-family: 'Playfair';
-  src: url('../fonts/PlayfairDisplaySC-Black.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'Lato';

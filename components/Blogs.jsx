@@ -19,22 +19,24 @@ function Blogs() {
               img={"https://i.postimg.cc/TY6WTbZS/scifi.jpg"}
             />
             <Blog
-              title={
-                "THE RISE OF AI: EXPLORING THE FUTURISTIC WORLD OF SCI-FI MOVIES"
-              }
+              title={"MOVIES COMING OUT THIS WEEK"}
               paragraph={
-                "Dive into the captivating realm of sci-fi movies, where AI takes center stage, unveiling a future filled with wonder and uncertainty."
+                "This week, cinephiles can look forward to a thrilling lineup of upcoming movies, promising unforgettable stories and mesmerizing performances."
               }
-              img={"https://i.postimg.cc/TY6WTbZS/scifi.jpg"}
+              img={
+                "https://i.postimg.cc/4xZqYRkz/happy-child-wearing-3d-glasses-surprised-kid-against-yellow-wall-cinema-movie-time-concept-411285-10.jpg"
+              }
             />
             <Blog
               title={
-                "THE RISE OF AI: EXPLORING THE FUTURISTIC WORLD OF SCI-FI MOVIES"
+                "Horror Movies: Reaching New Heights of Fear - A Modern Renaissance in the Genre"
               }
               paragraph={
-                "Dive into the captivating realm of sci-fi movies, where AI takes center stage, unveiling a future filled with wonder and uncertainty."
+                "In the world of horror, the shadows have deepened, and screams echo louder, making movies scarier than ever."
               }
-              img={"https://i.postimg.cc/TY6WTbZS/scifi.jpg"}
+              img={
+                "https://i.postimg.cc/bv4KNDzv/desktop-wallpaper-vintage-horror-comic-thumbnail.jpg"
+              }
             />
           </div>
         </div>

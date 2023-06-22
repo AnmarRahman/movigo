@@ -41,7 +41,7 @@ function ComingSoonMoviesList({ movieArray, loading }) {
                       onClick={() => movieClicked(movie.id)}
                     >
                       <img
-                        className="rounded-xl mb-8"
+                        className="rounded-xl mb-2"
                         src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                         alt={movie.original_title}
                       />
@@ -53,6 +53,7 @@ function ComingSoonMoviesList({ movieArray, loading }) {
                           {formattedReleaseDate}
                         </p>
                       </div>
+                      {console.log(movieArray)}
                     </div>
                   );
                 })}
