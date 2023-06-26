@@ -48,13 +48,13 @@ function TopRatedMovieList({ movieArray, loading }) {
                           alt={movie.original_title}
                         />
                         <div>
-                          <h2 className="text-lg w-[300px] sm:text-3xl text-white font-semibold title-font">
+                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
                             {movie.original_title}
                           </h2>
-                          <h2 className="text-lg w-[300px] sm:text-3xl text-white font-semibold title-font">
-                            {movie.vote_average}
+                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                            {`${movie.vote_average}/10`}
                           </h2>
-                          <p className="leading-relaxed text-2xl pb-0 text-gray-600">
+                          <p className="leading-relaxed text-xl pb-0 text-gray-600">
                             {formattedReleaseDate}
                           </p>
                         </div>
@@ -87,13 +87,13 @@ function TopRatedMovieList({ movieArray, loading }) {
                           alt={movie.original_title}
                         />
                         <div>
-                          <h2 className="text-lg w-[300px] sm:text-3xl text-white font-semibold title-font">
+                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
                             {movie.original_title}
                           </h2>
-                          <h2 className="text-lg w-[300px] sm:text-3xl text-white font-semibold title-font">
-                            {movie.vote_average}
+                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                            {`${movie.vote_average}/10`}
                           </h2>
-                          <p className="leading-relaxed text-2xl pb-0 text-gray-600">
+                          <p className="leading-relaxed text-xl pb-0 text-gray-600">
                             {formattedReleaseDate}
                           </p>
                         </div>

@@ -36,10 +36,10 @@ const Countdown = () => {
 
   return (
     <div className="flex justify-center items-center space-x-4">
-      <CountdownSquare value={countdown.days} label="Days" />
-      <CountdownSquare value={countdown.hours} label="Hours" />
-      <CountdownSquare value={countdown.minutes} label="Minutes" />
-      <CountdownSquare value={countdown.seconds} label="Seconds" />
+      <CountdownSquare value={countdown.days} label="D" />
+      <CountdownSquare value={countdown.hours} label="H" />
+      <CountdownSquare value={countdown.minutes} label="M" />
+      <CountdownSquare value={countdown.seconds} label="S" />
     </div>
   );
 };
