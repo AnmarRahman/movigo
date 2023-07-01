@@ -1,21 +1,14 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MoviesList from "../components/MoviesList";
-import Search from "../components/Search";
 import axios from "axios";
 
 function searchList({ movies }) {
   return (
-    <div className="bg-[wheat] flex items-center justify-center py-4">
-      <div className="w-[45vw] bg-[#E2CCB1] border-t-2 border-b-2 border-l-2 border-r-[1px]  border-black">
-        <Header href="/" buttonText="Home" />
-        <Search />
-        <MoviesList movieArray={movies} />
-      </div>
-      <div className="w-[45vw] bg-[#E2CCB1] border-t-2 border-b-2 border-l-[1px] border-r-2 border-black">
-        <Header href="/" buttonText="Home" />
-        <Search />
-        <MoviesList movieArray={movies} />
-      </div>
+    <div className="w-screen">
+      <Header href="/" buttonText="Home" />
+      <MoviesList movieArray={movies} />
+      <Footer />
     </div>
   );
 }

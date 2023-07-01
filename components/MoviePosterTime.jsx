@@ -2,7 +2,6 @@ import React from "react";
 import Countdown from "./Countdown";
 
 function MoviePosterTime() {
-  const targetDate = new Date("2023-07-01T00:00:00Z");
   return (
     <div className="bg-[url('https://i.postimg.cc/XYJN4PMF/indianajonesdarkwallpaper.jpg')] bg-cover flex justify-between items-center h-[700px]">
       <div className="w-1/2 text-center space-y-4">

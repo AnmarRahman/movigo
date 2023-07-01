@@ -19,7 +19,7 @@ function Search() {
 
   return (
     <>
-      <section className="text-gray-600">
+      <section className="text-gray-600 bg-[#242424]">
         <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
           <div className="flex w-full justify-center items-end">
             <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
