@@ -2,12 +2,14 @@ import axios from "axios";
 import Header from "../../components/Header";
 import MovieInfo from "../../components/MovieInfo";
 import React from "react";
+import Footer from "../../components/Footer";
 
 function moviePage({ movie }) {
   return (
-    <div className="bg-[#E2CCB1]">
+    <div className="bg-[#242424]">
       <Header href="/" buttonText="Home" />
       <MovieInfo movie={movie} />
+      <Footer />
     </div>
   );
 }

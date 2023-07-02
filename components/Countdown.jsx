@@ -35,7 +35,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center space-x-4">
+    <div className="flex justify-center items-center space-x-6">
       <CountdownSquare value={countdown.days} label="D" />
       <CountdownSquare value={countdown.hours} label="H" />
       <CountdownSquare value={countdown.minutes} label="M" />

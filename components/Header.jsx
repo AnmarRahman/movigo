@@ -37,7 +37,7 @@ function Header({ visible }) {
             <a className="mr-5 hover:text-gray-400">Now Playing</a>
             <a className="mr-5 hover:text-gray-400">Upcoming</a>
             <a className="mr-5 hover:text-gray-400">Top Rated</a>
-            <a className="mr-5 hover:text-gray-400">Genres</a>
+            <a className="mr-5 hover:text-gray-400">Blogs</a>
           </nav>
           <SearchButton />
         </div>

@@ -2,31 +2,31 @@ function Footer() {
   return (
     <>
       <footer class="text-gray-600 bg-[#1b1b1b]">
-        <div class="container px-5 py-16 mx-auto">
-          <div class="flex flex-wrap md:text-left text-center order-first">
+        <div class="container px-5 py-10 mx-auto">
+          <div class="flex flex-wrap justify-center items-center md:text-left text-center order-first">
             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 CATEGORIES
               </h2>
-              <nav class="list-none mb-10">
+              <nav class="list-none mb-0">
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    First Link
+                    Now Playing
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Second Link
+                    Upcoming
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Third Link
+                    Top Rated
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Fourth Link
+                    Blogs
                   </a>
                 </li>
               </nav>
@@ -35,25 +35,25 @@ function Footer() {
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 CATEGORIES
               </h2>
-              <nav class="list-none mb-10">
+              <nav class="list-none mb-0">
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    First Link
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Second Link
+                    Community/Forum
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Third Link
+                    News/Articles
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Fourth Link
+                    Movie Reviews
                   </a>
                 </li>
               </nav>
@@ -62,33 +62,33 @@ function Footer() {
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 CATEGORIES
               </h2>
-              <nav class="list-none mb-10">
+              <nav class="list-none mb-0">
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    First Link
+                    Privacy Policy
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Second Link
+                    Terms of Service
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Third Link
+                    Contact Us
                   </a>
                 </li>
                 <li>
                   <a class="text-white hover:text-gray-500 cursor-pointer">
-                    Fourth Link
+                    FAQ
                   </a>
                 </li>
               </nav>
             </div>
             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
+              {/* <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 SUBSCRIBE
-              </h2>
+              </h2> */}
               <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
                 <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                   <input
@@ -111,7 +111,7 @@ function Footer() {
           </div>
         </div>
         <div class="bg-gray-300">
-          <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+          <div class="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
