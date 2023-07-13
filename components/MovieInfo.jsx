@@ -41,9 +41,12 @@ function MovieInfo({ movie }) {
   return (
     <div className="container px-5 py-12 mx-auto">
       <BsArrowLeft
-        className="text-4xl ml-2 cursor-pointer hover:scale-[1.1] transition duration-300 mb-4"
+        className={`text-4xl ml-2 cursor-pointer hover:scale-[1.1] transition duration-300 mb-4 ${
+          searchedMovie === "undefined" && "hidden"
+        }`}
         onClick={() => router.push(`/${searchedMovie}`)}
       />
+      {console.log(searchedMovie)}
       <div
         className="w-full px-8 py-8 border-2 rounded-2xl shadow-2xl border-black border-opacity-60 flex items-center space-x-12 bg-black/50"
         key={movie.id}

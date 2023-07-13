@@ -10,6 +10,8 @@ function Header({ visible }) {
     router.push("/");
   };
 
+  const logoColor = { color: "rgb(99, 102, 241)" };
+
   return (
     <>
       <header className="text-gray-300 body-font bg-gray-600">
@@ -31,6 +33,7 @@ function Header({ visible }) {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
+
             <span className="ml-3 text-xl text-gray-300">MOVIGO</span>
           </Link>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
