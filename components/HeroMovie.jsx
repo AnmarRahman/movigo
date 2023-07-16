@@ -19,11 +19,11 @@ function HeroMovie({ movie }) {
 
   return (
     <>
-      <div className="flex items-center justify-center flex-col w-[90vw] py-10">
+      <div className="flex items-center justify-center flex-col w-[95vw] py-10">
         <h2 className="text-lg sm:text-6xl text-white font-semibold title-font">
           {movie.original_title.toUpperCase()}
         </h2>
-        <div className="px-8 py-16 w-[80vw] flex items-center justify-center space-x-32">
+        <div className="px-8 py-16 w-[90vw] flex items-center justify-center space-x-32">
           <div className="w-1/3 space-y-3">
             <p className="leading-snug text-xl  text-white font-semibold">
               {movie.overview}
