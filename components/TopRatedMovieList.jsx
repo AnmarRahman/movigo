@@ -23,7 +23,7 @@ function TopRatedMovieList({ movieArray, loading }) {
             ))
           ) : (
             <>
-              <div className="flex flex-col ">
+              <div className="flex flex-col mx-auto ">
                 {movieArray
                   .filter((movie) => movie.backdrop_path)
                   .filter((movie) => movie.original_language === "en")
@@ -62,7 +62,7 @@ function TopRatedMovieList({ movieArray, loading }) {
                     );
                   })}
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col mx-auto">
                 {movieArray
                   .filter((movie) => movie.backdrop_path)
                   .filter((movie) => movie.original_language === "en")
