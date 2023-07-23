@@ -45,7 +45,7 @@ function Hero({ visible }) {
       >
         <div className="w-full flex items-center justify-center overflow-hidden">
           <button
-            className={`absolute left-0 top-1/2 transform -translate-y-1/2 text-4xl text-white z-10 px-20 py-2 transition-opacity duration-300 focus:outline-none ${
+            className={`absolute left-0 top-1/2 transform -translate-y-1/2 text-4xl text-white z-10 px-4 py-2 transition-opacity duration-300 focus:outline-none ${
               (currentMovieIndex === 0 || !isHovered) && "invisible"
             }`}
             onClick={() => {
@@ -58,7 +58,7 @@ function Hero({ visible }) {
             &lt;
           </button>
           <button
-            className={`absolute right-0 top-1/2 transform -translate-y-1/2 text-4xl text-white z-10 px-20 py-2 transition-opacity duration-300 focus:outline-none ${
+            className={`absolute right-0 top-1/2 transform -translate-y-1/2 text-4xl text-white z-10 px-4 py-2 transition-opacity duration-300 focus:outline-none ${
               (currentMovieIndex === 9 || !isHovered) && "invisible"
             }`}
             onClick={() => {
