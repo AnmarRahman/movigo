@@ -21,7 +21,7 @@ function HeroMovie({ movie }) {
   return (
     <>
       <div className="flex items-center justify-center flex-col w-[95vw] py-10 space-y-10 lg:space-y-14">
-        <h2 className="text-4xl lg:text-6xl text-white font-semibold title-font">
+        <h2 className="text-4xl lg:text-6xl text-white font-semibold text-center">
           {movie.original_title.toUpperCase()}
         </h2>
         <div className="px-8 w-[90vw] flex items-center justify-center space-x-32">
