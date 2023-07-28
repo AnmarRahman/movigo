@@ -13,7 +13,7 @@ const CollapsibleText = ({ text, collapsedHeight }) => {
     <div className="relative overflow-hidden">
       <div
         className={`overflow-hidden transition-max-height ${
-          isExpanded ? "max-h-full" : `max-h-[110px]`
+          isExpanded ? "max-h-full" : `max-h-[115px]`
         }`}
         ref={contentRef}
       >

@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import HeroMovie from "./HeroMovie";
 
-function Hero({ visible }) {
+function Hero() {
   const [movies, setMovies] = useState([]);
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +39,7 @@ function Hero({ visible }) {
   return (
     <>
       <div
-        className={`relative mx-auto flex justify-center items-center h-[70vh] ${visible}`}
+        className={`relative mx-auto flex justify-center items-center h-[70vh]`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

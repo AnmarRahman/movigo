@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import CollapsibleText from "../components/CollapsibleText";
@@ -6,6 +6,26 @@ import CollapsibleText from "../components/CollapsibleText";
 function HeroMovie({ movie }) {
   const router = useRouter();
   const { searchedMovie } = router.query;
+
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+  useEffect(() => {
+    // Function to check and update screen size
+    const handleScreenResize = () => {
+      setIsLargeScreen(window.innerWidth > 1024);
+    };
+
+    // Add event listener for screen resize
+    window.addEventListener("resize", handleScreenResize);
+
+    // Call handleScreenResize once when the component mounts
+    handleScreenResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleScreenResize);
+    };
+  }, []);
 
   function movieClicked(id) {
     router.push(`/${searchedMovie}/${id}`);
@@ -24,11 +44,19 @@ function HeroMovie({ movie }) {
         <h2 className="text-4xl lg:text-6xl text-white font-semibold text-center">
           {movie.original_title.toUpperCase()}
         </h2>
-        <div className="px-8 w-[90vw] flex items-center justify-center space-x-32">
+        <div className="px-8 w-[90vw] flex lg:flex-row flex-col items-center justify-center lg:space-x-32 lg:space-y-0 space-y-10 lg:text-left text-center">
+          <img
+            className="rounded-xl w-[400px] lg:w-[500px]"
+            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+            alt=""
+          />
           <div className="lg:w-1/3 space-y-3">
-            <p className=" leading-snug text-base lg:text-xl text-white font-semibold text-clip">
-              <CollapsibleText text={movie.overview} />
-              {/* {movie.overview} */}
+            <p className=" leading-snug text-base lg:text-xl text-white font-semibold text-clip ">
+              {isLargeScreen ? (
+                <CollapsibleText text={movie.overview} />
+              ) : (
+                movie.overview
+              )}
             </p>
             <p className="leading-relaxed text-base lg:text-xl  text-white font-semibold">
               {releaseDate}
@@ -42,11 +70,6 @@ function HeroMovie({ movie }) {
               </span>
             </button>
           </div>
-          <img
-            className="rounded-xl w-[400px] lg:w-[500px]"
-            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-            alt=""
-          />
         </div>
       </div>
     </>
