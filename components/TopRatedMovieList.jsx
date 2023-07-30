@@ -37,24 +37,26 @@ function TopRatedMovieList({ movieArray, loading }) {
 
                     return (
                       <div
-                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-8 px-6 bg-black/50"
+                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 md:space-x-8 px-6 bg-black/50"
                         key={movie.id}
                         onClick={() => movieClicked(movie.id)}
                       >
-                        <p className="text-white text-5xl">{index + 1}</p>
+                        <p className="text-white text-3xl md:text-5xl">
+                          {index + 1}
+                        </p>
                         <img
-                          className="rounded-xl"
+                          className="rounded-xl md:w-[300px] w-[200px]"
                           src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                           alt={movie.original_title}
                         />
                         <div>
-                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
                             {movie.original_title}
                           </h2>
-                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
                             {`${movie.vote_average}/10`}
                           </h2>
-                          <p className="leading-relaxed text-xl pb-0 text-gray-600">
+                          <p className="leading-relaxed text-base md:text-xl pb-0 text-gray-600">
                             {formattedReleaseDate}
                           </p>
                         </div>
@@ -76,24 +78,26 @@ function TopRatedMovieList({ movieArray, loading }) {
 
                     return (
                       <div
-                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-8 px-6 bg-black/50"
+                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 md:space-x-8 px-6 bg-black/50"
                         key={movie.id}
                         onClick={() => movieClicked(movie.id)}
                       >
-                        <p className="text-white text-5xl">{index + 5}</p>
+                        <p className="text-white text-3xl md:text-5xl">
+                          {index + 5}
+                        </p>
                         <img
-                          className="rounded-xl"
+                          className="rounded-xl md:w-[300px] w-[200px]"
                           src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                           alt={movie.original_title}
                         />
                         <div>
-                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
                             {movie.original_title}
                           </h2>
-                          <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
                             {`${movie.vote_average}/10`}
                           </h2>
-                          <p className="leading-relaxed text-xl pb-0 text-gray-600">
+                          <p className="leading-relaxed text-base md:text-xl pb-0 text-gray-600">
                             {formattedReleaseDate}
                           </p>
                         </div>

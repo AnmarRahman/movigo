@@ -41,7 +41,7 @@ function TopRated() {
     <>
       <div className={`relative mx-auto bg-[#242424]`}>
         <div className="container px-5 py-12 mx-auto">
-          <p className="text-6xl font-extrabold text-white pb-12 text-center">
+          <p className="lg:text-6xl text-5xl font-extrabold text-white pb-12 text-center">
             TOP RATED
           </p>
           <TopRatedMoviesList movieArray={movies} />
