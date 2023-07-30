@@ -7,7 +7,9 @@ function Blogs() {
     <>
       <div className={`relative mx-auto bg-[#242424]`}>
         <div className="container py-12 mx-auto">
-          <p className="text-6xl font-extrabold text-white pb-12">BLOGS</p>
+          <p className="md:text-6xl text-5xl text-center font-extrabold text-white pb-12">
+            BLOGS
+          </p>
           <div className="flex flex-row items-center justify-between">
             <Blog
               title={
