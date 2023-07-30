@@ -36,7 +36,7 @@ function ComingSoonMoviesList({ movieArray, loading }) {
 
                   return (
                     <div
-                      className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-col items-center"
+                      className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-col items-center md:w-[300px] w-[250px] mx-auto"
                       key={movie.id}
                       onClick={() => movieClicked(movie.id)}
                     >
@@ -45,11 +45,11 @@ function ComingSoonMoviesList({ movieArray, loading }) {
                         src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                         alt={movie.original_title}
                       />
-                      <div className="">
-                        <h2 className="text-lg w-[300px] sm:text-2xl text-white font-semibold title-font">
+                      <div className="text-center">
+                        <h2 className=" text-lg sm:text-2xl text-white font-semibold title-font">
                           {movie.original_title}
                         </h2>
-                        <p className="leading-relaxed text-2xl pb-8 text-gray-600">
+                        <p className=" leading-relaxed text-2xl pb-8 text-gray-600">
                           {formattedReleaseDate}
                         </p>
                       </div>
