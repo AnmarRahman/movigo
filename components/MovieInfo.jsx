@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import axios from "axios";
+import CollapsibleText from "./CollapsibleText";
 
 function MovieInfo({ movie }) {
   const router = useRouter();
@@ -14,7 +15,6 @@ function MovieInfo({ movie }) {
       `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=166b5d91c302695e47098755a46149d8`
     );
     const videos = response.data.results;
-    console.log(videos);
     const trailer = videos.find(
       (video) => video.type === "Trailer" && video.site === "YouTube"
     );
@@ -31,8 +31,8 @@ function MovieInfo({ movie }) {
   }, []);
 
   const options = {
-    height: "360",
-    width: "640",
+    height: "216",
+    width: "384",
     playerVars: {
       autoplay: 1,
     },
@@ -46,26 +46,25 @@ function MovieInfo({ movie }) {
         }`}
         onClick={() => router.push(`/${searchedMovie}`)}
       />
-      {console.log(searchedMovie)}
       <div
-        className="w-full px-8 py-8 border-2 rounded-2xl shadow-2xl border-black border-opacity-60 flex items-center space-x-12 bg-black/50"
+        className="w-full px-8 py-8 border-2 rounded-2xl shadow-2xl border-black border-opacity-60 flex xl:flex-row flex-col justify-center items-center xl:space-x-12 xl:space-y-0 space-y-10 bg-black/50"
         key={movie.id}
       >
         <div className="space-y-4">
           <img
-            className=""
-            src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
+            className="mx-auto xl:mx-0"
+            src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
           />
           <div className="">
-            <h2 className="text-lg sm:text-xl text-white font-semibold title-font">
+            <h2 className="text-center xl:text-left text-lg sm:text-xl text-white font-semibold title-font">
               {movie.original_title}
             </h2>
-            <p className="leading-relaxed text-md text-gray-600">
+            <p className="text-center xl:text-left leading-relaxed text-md text-gray-600">
               {`Release date : ${movie.release_date}`}
             </p>
           </div>
-          <p className="leading-relaxed text-md text-white font-semibold">
-            {movie.overview}
+          <p className="text-center xl:text-left leading-relaxed text-md text-white font-semibold">
+            {<CollapsibleText text={movie.overview} />}
           </p>
         </div>
         <YouTube videoId={trailerId} opts={options} />

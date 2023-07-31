@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import CollapsibleText from "./CollapsibleText";
 
-function MoviesList({ movieArray, loading }) {
+function SearchedMovieList({ movieArray, loading }) {
   const router = useRouter();
   const { searchedMovie } = router.query;
   const [sortOption, setSortOption] = useState("DEFAULT");
@@ -86,23 +87,28 @@ function MoviesList({ movieArray, loading }) {
                     <div
                       className="w-full px-8 py-8 mb-4 border-2 rounded-2xl shadow-2xl hover:scale-[1.005] transition duration-300 border-black border-opacity-60 flex items-center space-x-12 bg-black/50 text-white"
                       key={movie.id}
-                      onClick={() => movieClicked(movie.id)}
                     >
                       <img
-                        className="rounded-xl"
+                        className="rounded-xl md:w-[300px] w-[275px]"
                         src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                         alt={movie.original_title}
+                        onClick={() => movieClicked(movie.id)}
                       />
                       <div className="">
-                        <h2 className="text-lg sm:text-xl font-semibold title-font">
+                        <h2 className="text-lg md:text-xl font-semibold title-font">
                           {movie.original_title}
                         </h2>
-                        <p className="leading-relaxed text-md mb-4 text-gray-600">
+                        <p className="leading-relaxed text-base md:text-lg mb-4 text-gray-600">
                           {`Release date: ${movie.release_date}`}
                         </p>
-                        <p className="leading-relaxed text-md mb-4 font-semibold">
-                          {movie.overview}
-                        </p>
+                        <div className="leading-relaxed text-base md:text-lg mb-4 font-semibold">
+                          {
+                            <CollapsibleText
+                              text={movie.overview}
+                              collapsedHeight="140"
+                            />
+                          }
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -114,4 +120,4 @@ function MoviesList({ movieArray, loading }) {
   );
 }
 
-export default MoviesList;
+export default SearchedMovieList;

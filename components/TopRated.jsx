@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import HeroMovie from "./HeroMovie";
-import MoviesList from "./MoviesList";
+import searchedMovieList from "./SearchedMovieList";
 import TopRatedMoviesList from "./TopRatedMovieList";
 
 function TopRated() {

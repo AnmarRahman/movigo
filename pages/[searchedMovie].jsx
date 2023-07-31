@@ -1,13 +1,13 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import MoviesList from "../components/MoviesList";
 import axios from "axios";
+import SearchedMovieList from "../components/SearchedMovieList";
 
 function searchList({ movies }) {
   return (
     <div className="w-screen">
       <Header href="/" buttonText="Home" />
-      <MoviesList movieArray={movies} />
+      <SearchedMovieList movieArray={movies} />
       <Footer />
     </div>
   );

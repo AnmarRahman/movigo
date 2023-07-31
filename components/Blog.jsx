@@ -18,7 +18,7 @@ function Blog({ title, paragraph, img }) {
           dolorem, quod dicta molestias.
         </span>
         <div className="absolute flex flex-col items-center justify-center space-y-20 md:space-y-10 lg:space-y-24 xl:space-y-64">
-          <span className="w-3/4 text-center bg-black/25 rounded-2xl text-white text-xs md:text-sm lg:text-lg xl:text-xl font-extrabold">
+          <span className="w-3/4 text-center bg-black/25 rounded-2xl text-white text-xs md:text-sm lg:text-lg xl:text-xl font-extrabold p-1">
             {title}
           </span>
           <div className="flex flex-col items-center justify-center">
