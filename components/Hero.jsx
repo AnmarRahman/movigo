@@ -10,7 +10,6 @@ function Hero() {
   useEffect(() => {
     fetchMovies().then((moviesData) => {
       setMovies(moviesData.slice(0, 10));
-      console.log(movies);
     });
   }, []);
 
@@ -39,6 +38,7 @@ function Hero() {
   return (
     <>
       <div
+        id="nowPlaying"
         className={`relative mx-auto flex justify-center items-center h-[70vh]`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -49,7 +49,6 @@ function Hero() {
               (currentMovieIndex === 0 || !isHovered) && "invisible"
             }`}
             onClick={() => {
-              console.log(currentMovieIndex);
               if (currentMovieIndex !== 0) {
                 handlePreviousMovie();
               }
@@ -62,7 +61,6 @@ function Hero() {
               (currentMovieIndex === 9 || !isHovered) && "invisible"
             }`}
             onClick={() => {
-              console.log(currentMovieIndex);
               if (currentMovieIndex !== 9) {
                 handleNextMovie();
               }

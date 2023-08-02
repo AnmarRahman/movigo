@@ -13,9 +13,7 @@ function Search() {
     router.push(`/${titleSearched}`);
   }
 
-  useEffect(() => {
-    console.log(titleSearched);
-  }, [titleSearched]);
+  useEffect(() => {}, [titleSearched]);
 
   return (
     <>

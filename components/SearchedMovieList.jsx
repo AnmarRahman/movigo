@@ -112,7 +112,6 @@ function SearchedMovieList({ movieArray, loading }) {
                       </div>
                     </div>
                   ))}
-            {console.log(movieArray)}
           </div>
         </div>
       </section>
