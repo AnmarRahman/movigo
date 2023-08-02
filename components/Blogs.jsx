@@ -5,7 +5,7 @@ import Blog from "./Blog";
 function Blogs() {
   return (
     <>
-      <div className={`relative mx-auto bg-[#242424]`}>
+      <div id="blogs" className={`relative mx-auto bg-[#242424]`}>
         <div className="container py-12 mx-auto">
           <p className="md:text-6xl text-5xl text-center font-extrabold text-white pb-12">
             BLOGS

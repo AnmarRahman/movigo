@@ -39,12 +39,11 @@ function Upcoming() {
 
   return (
     <>
-      <div className={`relative mx-auto bg-[#242424]`}>
+      <div id="upcoming" className={`relative mx-auto bg-[#242424]`}>
         <div className="container px-5 py-12 mx-auto">
           <p className="lg:text-6xl text-5xl text-center font-extrabold text-white pb-12">
             UPCOMING
           </p>
-          {/* {console.log(movies)} */}
           <UpcomingMoviesList movieArray={movies} />
         </div>
       </div>

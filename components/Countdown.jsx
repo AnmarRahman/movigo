@@ -12,7 +12,7 @@ const Countdown = () => {
   useEffect(() => {
     const countdownInterval = setInterval(() => {
       const now = new Date();
-      const targetDate = new Date("2023-07-30");
+      const targetDate = new Date("2023-12-30");
       const timeDifference = targetDate - now;
 
       if (timeDifference > 0) {

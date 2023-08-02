@@ -53,7 +53,6 @@ function ComingSoonMoviesList({ movieArray, loading }) {
                           {formattedReleaseDate}
                         </p>
                       </div>
-                      {console.log(movieArray)}
                     </div>
                   );
                 })}
