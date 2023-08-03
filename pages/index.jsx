@@ -17,7 +17,6 @@ export default function Test() {
       <Header visible={visible} href="searchList" buttonText="Movies List" />
       <Hero visible={visible} />
       <Upcoming />
-      {/* <Hero visible={visible} /> */}
       <MoviePosterTime />
       <TopRated />
       <Blogs />
