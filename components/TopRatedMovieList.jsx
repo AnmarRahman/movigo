@@ -37,26 +37,26 @@ function TopRatedMovieList({ movieArray, loading }) {
 
                     return (
                       <div
-                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 md:space-x-8 px-6 bg-black/50"
+                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-start mb-8 space-x-4 md:space-x-8 sm:px-6 px-2 bg-black/50"
                         key={movie.id}
                         onClick={() => movieClicked(movie.id)}
                       >
-                        <p className="text-white text-3xl md:text-5xl">
+                        <p className="text-white text-xl sm:text-3xl md:text-5xl">
                           {index + 1}
                         </p>
                         <img
-                          className="rounded-xl md:w-[300px] w-[200px]"
+                          className="rounded-xl md:w-[300px] sm:w-[200px] w-[150px] "
                           src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                           alt={movie.original_title}
                         />
                         <div>
-                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
+                          <h2 className="w-[300px] text-xs sm:text-lg md:text-2xl text-white font-semibold title-font">
                             {movie.original_title}
                           </h2>
-                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
+                          <h2 className="w-[300px] text-xs sm:text-lg md:text-2xl text-white font-semibold title-font">
                             {`${movie.vote_average}/10`}
                           </h2>
-                          <p className="leading-relaxed text-base md:text-xl pb-0 text-gray-600">
+                          <p className="leading-relaxed text-xs sm:text-base md:text-xl pb-0 text-gray-600">
                             {formattedReleaseDate}
                           </p>
                         </div>
@@ -78,26 +78,26 @@ function TopRatedMovieList({ movieArray, loading }) {
 
                     return (
                       <div
-                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-center mb-8 space-x-4 md:space-x-8 px-6 bg-black/50"
+                        className="rounded-2xl hover:scale-[1.01] transition duration-300 flex flex-row items-center justify-start mb-8 space-x-4 md:space-x-8 sm:px-6 px-2 bg-black/50"
                         key={movie.id}
                         onClick={() => movieClicked(movie.id)}
                       >
-                        <p className="text-white text-3xl md:text-5xl">
+                        <p className="text-white text-xl sm:text-3xl md:text-5xl">
                           {index + 5}
                         </p>
                         <img
-                          className="rounded-xl md:w-[300px] w-[200px]"
+                          className="rounded-xl md:w-[300px] sm:w-[200px] w-[150px] "
                           src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                           alt={movie.original_title}
                         />
                         <div>
-                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
+                          <h2 className="w-[300px] text-xs sm:text-lg md:text-2xl text-white font-semibold title-font">
                             {movie.original_title}
                           </h2>
-                          <h2 className="text-lg w-[300px] md:text-2xl text-white font-semibold title-font">
+                          <h2 className="w-[300px] text-xs sm:text-lg md:text-2xl text-white font-semibold title-font">
                             {`${movie.vote_average}/10`}
                           </h2>
-                          <p className="leading-relaxed text-base md:text-xl pb-0 text-gray-600">
+                          <p className="leading-relaxed text-xs sm:text-base md:text-xl pb-0 text-gray-600">
                             {formattedReleaseDate}
                           </p>
                         </div>

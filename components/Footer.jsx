@@ -3,7 +3,7 @@ function Footer() {
     <>
       <footer className="text-gray-600 bg-[#1b1b1b]">
         <div className="container px-5 py-10 mx-auto">
-          <div className="flex justify-center items-center md:text-left text-center order-first text-sm lg:text-base">
+          <div className="flex sm:flex-row flex-col justify-center items-center md:text-left text-center order-first text-sm lg:text-base space-y-4 sm:space-y-0">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4 ">
               <h2 className="title-font font-medium text-white tracking-widest mb-3">
                 CATEGORIES
@@ -86,10 +86,7 @@ function Footer() {
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              {/* <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
-                SUBSCRIBE
-              </h2> */}
-              <div className="flex xl:flex-nowrap md:flex-wrap flex-wrap justify-center items-end md:justify-start xl:space-y-0 space-y-2 xl:space-x-4 space-x-0">
+              <div className="flex sm:flex-row flex-col xl:flex-nowrap md:flex-wrap flex-wrap justify-center sm:items-end items-center md:justify-start xl:space-y-0 space-y-2 xl:space-x-4 space-x-0">
                 <div className="relative w-auto">
                   <input
                     type="text"

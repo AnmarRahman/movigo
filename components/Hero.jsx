@@ -39,7 +39,7 @@ function Hero() {
     <>
       <div
         id="nowPlaying"
-        className={`relative mx-auto flex justify-center items-center h-[70vh]`}
+        className={`relative mx-auto flex justify-center items-center h-[90vh]`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

@@ -89,19 +89,19 @@ function SearchedMovieList({ movieArray, loading }) {
                       key={movie.id}
                     >
                       <img
-                        className="rounded-xl md:w-[300px] w-[275px]"
+                        className="rounded-xl md:w-[300px] sm:w-[275px] w-[100px]"
                         src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
                         alt={movie.original_title}
                         onClick={() => movieClicked(movie.id)}
                       />
                       <div className="">
-                        <h2 className="text-lg md:text-xl font-semibold title-font">
+                        <h2 className="text-sm sm:text-lg md:text-xl font-semibold title-font">
                           {movie.original_title}
                         </h2>
-                        <p className="leading-relaxed text-base md:text-lg mb-4 text-gray-600">
+                        <p className="leading-relaxed text-xs sm:text-base md:text-lg mb-4 text-gray-600">
                           {`Release date: ${movie.release_date}`}
                         </p>
-                        <div className="leading-relaxed text-base md:text-lg mb-4 font-semibold">
+                        <div className="leading-relaxed text-xs sm:text-base md:text-lg mb-4 font-semibold">
                           {
                             <CollapsibleText
                               text={movie.overview}

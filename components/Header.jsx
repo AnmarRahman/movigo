@@ -38,9 +38,9 @@ function Header({ visible }) {
   return (
     <>
       <div
-        className={`fixed h-[100px] top-0 left-0 right-0 z-50 text-gray-300 bg-gray-600 mx-auto flex space-y-3 space-x-10 pt-2 pb-5 px-10 flex-col md:flex-row items-center justify-between ${
+        className={` md:h-[100px] h-[75px] top-0 left-0 right-0 z-50 text-gray-300 bg-gray-600 mx-auto flex sm:px-20 px-10 py-0 flex-row items-center justify-between space-x-6 ${
           isHalfHidden
-            ? "top-[-50px] transition-top duration-300 ease-in-out"
+            ? "md:top-[-50px] top-[-50px] transition-top duration-300 ease-in-out"
             : ""
         } 
           
@@ -53,7 +53,7 @@ function Header({ visible }) {
           onClick={handleClick}
           className="flex title-font font-medium items-center text-gray-900 "
         >
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center md:scale-100 scale-75">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="3em"
@@ -66,7 +66,7 @@ function Header({ visible }) {
             <span className="text-lg text-gray-300">MOVIGO</span>
           </div>
         </Link>
-        <nav className="flex flex-wrap items-center text-base text-center justify-center cursor-pointer">
+        <nav className=" hidden md:flex flex-wrap items-center text-base text-center justify-center cursor-pointer">
           <ScrollLink
             to="nowPlaying"
             smooth={true}

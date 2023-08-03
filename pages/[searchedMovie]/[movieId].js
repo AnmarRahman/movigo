@@ -6,7 +6,7 @@ import Footer from "../../components/Footer";
 
 function moviePage({ movie }) {
   return (
-    <div className="bg-[#242424]">
+    <div className="bg-[#242424] overflow-x-hidden scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
       <Header href="/" buttonText="Home" />
       <MovieInfo movie={movie} />
       <Footer />

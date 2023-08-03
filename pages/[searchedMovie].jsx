@@ -5,7 +5,7 @@ import SearchedMovieList from "../components/SearchedMovieList";
 
 function searchList({ movies }) {
   return (
-    <div className="w-screen">
+    <div className="bg-[#242424] overflow-x-hidden scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
       <Header href="/" buttonText="Home" />
       <SearchedMovieList movieArray={movies} />
       <Footer />
