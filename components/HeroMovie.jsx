@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import CollapsibleText from "../components/CollapsibleText";
 
 function HeroMovie({ movie }) {
