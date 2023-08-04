@@ -5,27 +5,21 @@ import Link from "next/link";
 function Blog({ title, paragraph, img }) {
   return (
     <>
-      <div className=" relative flex justify-center items-center hover:scale-[1.01] transition duration-300">
+      <div className=" relative flex justify-center hover:scale-[1.01] transition duration-300">
         <img
-          className="rounded-3xl 2xl:w-[450px] xl:w-[400px] lg:w-[300px] md:w-[220px] sm:w-[200px]"
+          className="rounded-3xl 2xl:w-[450px] xl:w-[400px] lg:w-[300px] md:w-[220px] sm:w-[200px] w-[150px] "
           src={img}
           alt=""
         />
-        <span className="rounded-3xl absolute bottom-0 left-0 text-transparent text-xl bg-gradient-to-t from-black to-transparent h-full ">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-          voluptate nam aliquid. Quia deserunt, iusto suscipit laboriosam, eos
-          architecto asperiores hic corporis corrupti sit obcaecati iure
-          dolorem, quod dicta molestias.
-        </span>
-        <div className="absolute flex flex-col items-center justify-center space-y-20 md:space-y-10 lg:space-y-24 xl:space-y-64">
-          <span className="w-3/4 text-center bg-black/25 rounded-2xl text-white text-xs md:text-sm lg:text-lg xl:text-xl font-extrabold p-1">
+        <div className="absolute rounded-3xl flex flex-col items-center sm:justify-between justify-center h-full py-6 bg-gradient-to-t from-black to-transparent">
+          <span className="w-3/4 text-center bg-black/25 rounded-2xl text-white text-xs md:text-sm lg:text-lg xl:text-xl font-extrabold p-1 ">
             {title}
           </span>
-          <div className="flex flex-col items-center justify-center">
-            <span className=" text-white text-xs md:text-sm lg:text-lg xl:text-xl font-extrabold">
+          <div className="w-3/4">
+            <span className=" text-white sm:block hidden text-xs md:text-sm lg:text-lg xl:text-xl font-extrabold self-center ">
               By : Anmar Rahman
             </span>
-            <span className="w-3/4 text-white text-xs md:text-sm lg:text-base xl:text-lg">
+            <span className=" sm:block hidden text-white text-xs md:text-sm lg:text-base xl:text-lg">
               {paragraph}
             </span>
           </div>

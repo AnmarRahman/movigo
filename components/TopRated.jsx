@@ -39,13 +39,11 @@ function TopRated() {
 
   return (
     <>
-      <div id="topRated" className={`relative mx-auto bg-[#242424]`}>
-        <div className="py-12 px-0 mx-auto">
-          <p className="lg:text-6xl text-5xl font-extrabold text-white pb-12 text-center">
-            TOP RATED
-          </p>
-          <TopRatedMoviesList movieArray={movies} />
-        </div>
+      <div id="topRated" className={`relative py-12 px-0 mx-auto bg-[#242424]`}>
+        <p className="lg:text-6xl text-5xl font-extrabold text-white pb-12 text-center">
+          TOP RATED
+        </p>
+        <TopRatedMoviesList movieArray={movies} />
       </div>
     </>
   );
