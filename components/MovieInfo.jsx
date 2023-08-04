@@ -31,8 +31,8 @@ function MovieInfo({ movie }) {
   }, []);
 
   const options = {
-    height: "216",
-    width: "384",
+    height: "auto",
+    width: "auto",
     playerVars: {
       autoplay: 1,
     },
