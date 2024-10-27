@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import CountdownSquare from "./CountdownSquare";
 
 const Countdown = () => {
@@ -12,7 +12,7 @@ const Countdown = () => {
   useEffect(() => {
     const countdownInterval = setInterval(() => {
       const now = new Date();
-      const targetDate = new Date("2023-12-30");
+      const targetDate = new Date("2025-12-30");
       const timeDifference = targetDate - now;
 
       if (timeDifference > 0) {
