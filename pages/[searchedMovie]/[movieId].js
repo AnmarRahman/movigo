@@ -1,8 +1,7 @@
 import axios from "axios";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MovieInfo from "../../components/MovieInfo";
-import React from "react";
-import Footer from "../../components/Footer";
 
 function moviePage({ movie }) {
   return (
@@ -16,10 +15,11 @@ function moviePage({ movie }) {
 
 export async function getServerSideProps(context) {
   const { movieId } = context.query;
+  const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
   try {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=166b5d91c302695e47098755a46149d8&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
     );
     const movie = data;
     return {

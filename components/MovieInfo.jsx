@@ -1,18 +1,19 @@
-import { BsArrowLeft } from "react-icons/bs";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import YouTube from "react-youtube";
 import axios from "axios";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { BsArrowLeft } from "react-icons/bs";
+import YouTube from "react-youtube";
 import CollapsibleText from "./CollapsibleText";
 
 function MovieInfo({ movie }) {
   const router = useRouter();
   const { movieId, searchedMovie } = router.query;
   const [trailerId, setTrailerId] = useState(null);
+  const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
   async function getTrailerId() {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=166b5d91c302695e47098755a46149d8`
+      `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`
     );
     const videos = response.data.results;
     const trailer = videos.find(
