@@ -10,9 +10,15 @@ const Countdown = () => {
   });
 
   useEffect(() => {
+    const calculateTargetDate = () => {
+      const now = new Date();
+      now.setDate(now.getDate() + 45);
+      return now;
+    };
+
     const countdownInterval = setInterval(() => {
       const now = new Date();
-      const targetDate = new Date("2025-12-30");
+      const targetDate = calculateTargetDate();
       const timeDifference = targetDate - now;
 
       if (timeDifference > 0) {
