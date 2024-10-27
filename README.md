@@ -36,7 +36,7 @@ Follow these steps to set up the project locally:
    npm install
 3. **Configure environment variables:**
 - Create a .env.local file in the root directory.
-- Add your API key as an environment variable:
+- Add your API key in the :
   ```bash
   NEXT_PUBLIC_TMDB_API_KEY=your-tmdb-api-key
 4. **Run the development server:**
